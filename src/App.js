@@ -9,11 +9,21 @@ function App() {
   };
   return (
     <div className="App">
-      <div id="burger" className={isOpen ? "open" : ""} onClick={handleClick}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className="navbar">
+        <div className="wide-nav">
+          <ul className="nav-list">
+            <li>Menu</li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Merch</li>
+          </ul>
+        </div>
+        <div id="burger" className={isOpen ? "open" : ""} onClick={handleClick}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
       <div className="content">
         <div className="content-item content-0"></div>
