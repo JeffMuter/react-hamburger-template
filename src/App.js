@@ -24,6 +24,14 @@ function App() {
           <span></span>
           <span></span>
         </div>
+        <aside className="sidebar">
+          <ul>
+            <li>Menu</li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Merch</li>
+          </ul>
+        </aside>
       </div>
       <div className="content">
         <div className="content-item content-0"></div>
