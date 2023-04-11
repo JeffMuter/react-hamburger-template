@@ -24,14 +24,16 @@ function App() {
           <span></span>
           <span></span>
         </div>
-        <aside className="sidebar">
-          <ul>
-            <li>Menu</li>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Merch</li>
-          </ul>
-        </aside>
+        <div id="sidebar" className={isOpen ? "side-open" : ""}>
+          <aside className="sidebar" onClick={handleClick}>
+            <ul className="side-list">
+              <li className="side-menu">Menu</li>
+              <li className="side-menu">Contact</li>
+              <li className="side-menu">About</li>
+              <li className="side-menu">Merch</li>
+            </ul>
+          </aside>
+        </div>
       </div>
       <div className="content">
         <div className="content-item content-0"></div>

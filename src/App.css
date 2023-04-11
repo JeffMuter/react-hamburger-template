@@ -25,10 +25,11 @@
 @media (max-width: 480px) {
   #burger {
     display: block; /* show the icon when screen width is 480px or less */
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
     width: 50px;
     height: 30px;
-    float: right;
-    margin: 1rem;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -38,6 +39,7 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+    z-index: 2;
   }
 }
 
@@ -99,14 +101,29 @@
   left: 50%;
 }
 
-.sidebar {
-  width: 30vw;
+#sidebar {
+  translate: 100%;
+  max-width: 10rem;
   height: 100vh;
   background-color: rgb(51, 51, 51);
   color: white;
   float: right;
+  position: relative;
   padding: 3rem;
-  padding-top: 2rem;
+  padding-top: 5rem;
+  transition: transform 0.5s ease-out;
+}
+#sidebar.side-open {
+  transform: translateX(-100%);  
+}
+
+.side-list {
+  list-style: none;
+}
+
+.side-menu {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .content {
